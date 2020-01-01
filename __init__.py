@@ -11,6 +11,7 @@
 # limitations under the License.
 #
 # All credits go to domcross (Github https://github.com/domcross)
+# and J1nx (https://github.com/j1nx/respeaker-4mic-hat-skill)
 
 import time
 
@@ -23,10 +24,10 @@ from mycroft import intent_file_handler
 from pixel_ring import pixel_ring
 from gpiozero import LED
 
-class ReSpeaker_4mic_hat(MycroftSkill):
+class ReSpeaker_6mic_hat(MycroftSkill):
 
 	def __init__(self):
-		super(ReSpeaker_4mic_hat, self).__init__(name="ReSpeaker_4mic_hat")
+		super(ReSpeaker_6mic_hat, self).__init__(name="ReSpeaker_6mic_hat")
 
 	def initialize(self):
 		self.log.info("Pixel Ring: Initializing")
@@ -98,4 +99,4 @@ class ReSpeaker_4mic_hat(MycroftSkill):
 		self.speak_dialog("DisablePixelRing")
 
 def create_skill():
-	return ReSpeaker_4mic_hat()
+	return ReSpeaker_6mic_hat()
